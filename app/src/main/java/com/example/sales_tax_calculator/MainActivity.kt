@@ -31,11 +31,17 @@ class MainActivity : AppCompatActivity() {
 
             override fun afterTextChanged(p0: Editable?) {
                 Log.i(TAG, "afterTextChanged $p0")
+                computeSalesTax()
 
             }
 
         })
 
+    }
+
+    private fun computeSalesTax() {
+        val baseAmount = etBaseAmount.text.toString().toDouble()
+        val state = etStateAbbrv.progress
     }
 
 }
